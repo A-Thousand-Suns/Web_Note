@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>纯CSS二级导航栏</title>
+        <meta charset="utf-8" />
+        <style type="text/css">       
+            *{
+                margin:0;
+                padding:0;
+                list-style:none;
+                font-size:12px;
+            }
+                 
+            body{
+                background:#FFF;
+            }   
+             
+            a{
+                text-decoration:none;
+            }
+             
+            .nav{
+                width:500px;
+                height:200px;
+                margin:100px auto 0 auto;
+                text-align:center;
+            }
+ 
+            .nav ul{
+                float:left;
+            }
+ 
+            .nav ul li{
+                float:left;
+                width:60px;
+                line-height:40px;
+                position:relative;
+                background-color:#F8F8F8;                           
+            }
+ 
+            .nav .nav_first{
+                border-left:1px dotted #EAEAEA;
+            }
+             
+            .nav ul li a{
+                color:#666;
+                display:block;
+                font-family:Microsoft YaHei;
+                border:1px dotted #EAEAEA;
+                border-left:none;
+            }
+ 
+            .nav ul li a:hover{
+                color:#000;
+            }       
+ 
+            .nav ul li .active{
+                background-color:#D8450B;
+                border:1px solid #D8450B;
+                color:#EEE;
+            }               
+ 
+            .nav ul li .active:hover{
+                background-color:#D8450B;
+                color:#EEE;
+            }
+ 
+            .nav ul li:hover .sub_nav{
+                display:block;
+            }
+         
+            .nav .sub_nav{
+                position:absolute;
+                width:90px;
+                display:none;
+                left:-1px;
+            }
+             
+            .nav .sub_nav li{
+                text-align:left;
+                width:100px;                
+            }
+             
+            .nav .sub_nav b{
+                width:15px;
+                background-color:#CCC;
+                display:inline-block;
+                margin-right:15px;
+            }
+ 
+            .nav .sub_nav li a{
+                border-top:none;
+            }
+ 
+            .nav .sub_nav li .sub_nav_last{
+                border-bottom:none;
+            }
+                 
+            .nav .sub_nav li a:hover b{
+                background-color:#999;
+            }
+ 
+            .nav .sub_nav li .sub_active{
+                 
+            }
+ 
+            .nav .caret {
+                display: inline-block;
+                width: 0;
+                height: 0;
+                vertical-align: middle;             
+                border-top: 4px dashed;
+                border-top: 4px solid \9;
+                border-right: 4px solid transparent;
+                border-left: 4px solid transparent;
+                border-top-color: #777777;
+                margin-left:5px;
+            }
+ 
+        </style>
+    </head>
+    <body>        
+        <div id="nav" class="nav">
+            <ul>
+                <li><a href="" class="active nav_first">首页</a></li> 
+                <li><a href="">博文<div class="caret"></div></a>                
+                    <ul class="sub_nav">
+                        <li><a href="" class="sub_active"><b>&nbsp;</b>生活随记</a></li>
+                        <li><a href=""><b>&nbsp;</b>影视推荐</a></li>
+                        <li><a href=""><b>&nbsp;</b>美文欣赏</a></li>
+                        <li><a href=""><b>&nbsp;</b>互联杂谈</a></li>
+                        <li><a href=""><b>&nbsp;</b>资源分享</a></li>
+                    </ul>
+                </li> 
+                <li><a href="">音乐<div class="caret"></div></a>
+                    <ul class="sub_nav">
+                        <li><a href="" class="sub_active"><b>&nbsp;</b>生活随记</a></li>
+                        <li><a href=""><b>&nbsp;</b>影视推荐</a></li>
+                        <li><a href=""><b>&nbsp;</b>美文欣赏</a></li>
+                        <li><a href=""><b>&nbsp;</b>互联杂谈</a></li>
+                        <li><a href="" class="sub_nav_last"><b>&nbsp;</b>资源分享</a></li>
+                    </ul>
+                </li> 
+                <li><a href="">说说</a></li>  
+                <li><a href="">相册</a></li>  
+                <li><a href="">留言</a></li>  
+            </ul>
+        </div>    
+ 
+    </body>
+</html>
